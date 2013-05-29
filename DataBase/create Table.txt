@@ -1,0 +1,102 @@
+create table dbo.slpl_userInfo(
+UserId	uniqueidentifier 	NOT NULL,
+firstName	varchar(20) 		Not Null,
+lastName	varchar(20)		Not Null,
+birthday	datetime,
+address		varchar(100),
+address2	varchar(100),
+city		varchar(20),
+state		char(2),
+zipcode		varchar(10),
+phone		varchar(20),
+phone2		varchar(20),
+constraint patron_pk  Primary key (UserId));
+
+
+CREATE TABLE dbo.aspnet_Users(
+	ApplicationId uniqueidentifier NOT NULL,
+	UserId uniqueidentifier NOT NULL,
+	UserName nvarchar(256) NOT NULL,
+	LoweredUserName [nvarchar](256) NOT NULL,
+	MobileAlias [nvarchar](16) NULL,
+	IsAnonymous [bit] NOT NULL,
+	LastActivityDate [datetime] NOT NULL,
+constraint users_pk primary key (UserID),
+constraint user_fk foreign key (UserId) references slpl_UserInfo(UserId));
+
+create table dbo.slpl_material_game(
+gameID			char(10)      not null,
+callNumber		nvarchar(256)  null,
+title			nvarchar(256)	  not null,
+author			nvarchar(50)  null,
+publisher			varchar(30)	  null,
+publishYear		datetime	  null,
+description	varchar(500)	null,
+availability	char(1)		not null,
+constraint  game_pk primary key	(gameid))
+
+
+create table dbo.slpl_material_book(
+bookID		char(10)      not null,
+callNumber		nvarchar(256)  null,
+title			nvarchar(256)	  not null,
+author			nvarchar(50)  null,
+publisher		varchar(30)	  null,
+publishYear		datetime	  null,
+description	varchar(500)	null,
+availability	char(1)		not null,
+constraint  book_pk primary key	(bookid));
+
+
+create table dbo.slpl_material_DVD(
+DVDID		char(10)      not null,
+callNumber		nvarchar(256)  null,
+title			nvarchar(256)	  not null,
+author			nvarchar(50)  null,
+publisher	varchar(30)	  null,
+publishYear		datetime	  null,
+description		varchar(500)	null,
+availability	char(1)		not null,
+constraint  DVD_pk primary key	(DVDID));
+
+
+create table dbo.slpl_gameReport(
+rentID    nchar(6)    not null,
+gameID    char(10)   not null,
+UserId   uniqueidentifier		not null,
+date_borrow	datetime	null,
+date_due  datetime  null,
+date_return	datetime	null,
+issue_by	varchar(20)	null,
+return_by    varchar(20)	null
+constraint PK_slpl_GameReport	primary key (rentID),
+constraint gameID_fk	foreign key (gameID) references slpl_material_game(gameID),
+constraint userID_game_fk foreign key(UserId ) references aspnet_Users(UserID));
+
+
+create table dbo.slpl_DVDreport(
+rentID    nchar(6)    not null,
+DVDID    char(10)   not null,
+UserId   uniqueidentifier		not null,
+date_borrow	datetime	null,
+date_due  datetime  null,
+date_return	datetime	null,
+issue_by	varchar(20)	null,
+return_by    varchar(20)	null
+constraint PK_slpl_DVDReport	primary key (DVDID,UserId),
+constraint DVDID_fk	foreign key (DVDID) references slpl_material_DVD(DVDID),
+constraint userID_DVD_fk foreign key(UserId ) references aspnet_Users(UserID));
+
+
+create table dbo.slpl_bookReport(
+rentID    nchar(6)    not null,
+bookID    char(10)   not null,
+UserId   uniqueidentifier		not null,
+date_borrow	datetime	null,
+date_due  datetime  null,
+date_return	datetime	null,
+issue_by	varchar(20)	null,
+return_by    varchar(20)	null
+constraint PK_slpl_bookReport	primary key (bookID,UserId),
+constraint bookID_fk	foreign key (bookID) references slpl_material_book(bookID),
+constraint userID_book_fk foreign key(UserId ) references aspnet_Users(UserID));

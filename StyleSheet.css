@@ -1,0 +1,254 @@
+﻿body
+{
+    height: 702px;
+    background-position: center center;
+    background-repeat: repeat-y;
+    background-attachment: scroll;
+    font-family: Adobe Garamond Pro
+}
+h1.title
+{
+    font-size: large;font-family: Adobe Garamond Pro
+}
+h2.title
+{font-size:medium;}
+
+h3.title
+{font-size:small;
+ text-decoration:underline;}
+    
+h4.title
+{
+    color:#800000;
+    font-size: medium;
+    text-align: left;
+}
+.title
+{
+    font-family: arial, Helvetica, sans-serif;
+    color: #800000;
+    margin-left: 40px;
+}
+.logo
+{padding:20px;
+    font-family: 'Century Gothic';
+    font-size: 40px;
+    text-align: center;
+    color: #800000;
+}
+.footer
+{   
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    color: #666666;
+    clip: rect(auto, auto, auto, auto);
+    clear:both;
+    position:relative;
+	bottom:0px;
+	margin-left:300px;
+	
+}
+
+
+.review
+{float:right;}
+
+
+/* CSS to format the ASP.NET 4 menu control */
+.StaticMenu
+{
+    background-position: center center;
+    margin: auto;
+    border-style: hidden;
+    border-width: inherit;
+    padding: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    float: none;
+    color: #FFFFFF !important;
+    font-size: large;
+}
+.StaticMenu a, a:visited
+{
+    color: #FFFFFF;
+}
+
+.DynamicHoverStyle
+{text-decoration: underline;
+}
+.StaticHoverStyle {text-decoration: underline;}
+
+.DynamicMenuItemStyle
+{ 
+    padding: 5px;
+   
+    background: rgba(0, 0, 0, 0.6);
+  
+}
+.StaticMenuItemStyle  { padding:5px; border: thin groove #333333; }
+
+.DynamicMenuStyle
+{
+   color: #FFFFFF;
+  
+     background: rgba(0, 0, 0, 0.6);
+}
+.DynamicMenuStyle a, a:hover { text-decoration: underline; }
+
+.StaticMenuStyle
+{
+    color: #FFFFFF;
+}
+.StaticMenuStyle a, a:visited, a:hover
+{
+    color: #FFFFFF;
+    
+}
+
+.DynamicSelectedStyle
+{text-decoration: underline;}
+.StaticSelectedStyle {  text-decoration: underline;  }
+
+/* CSS to format the main menu control */
+.mainmenu
+{   font-family: Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+    width: 100%;
+    position:relative;
+    left:0px;
+    background-repeat: no-repeat;
+    background-color: #800000;
+    height: 39px;
+    background: rgba(0, 0, 0, 0.6)
+}
+
+.mainmenu a, a:visited
+{
+    padding: 5px;
+    margin: 5px;
+   
+    text-align: center;
+}
+.mainmenu a:hover
+{text-decoration: underline;
+}
+#wrap
+{
+    padding: 10px 10px 10px 10px;
+    margin-left: 100px;
+    width: 1440px;
+    text-align: left;
+    float: left;
+    background-image: url('DocShare/Images/rsz_1rsz_background-notop.jpg');
+    height: auto;
+}
+
+#leftmenubar
+{
+    padding: 5px;
+    margin-top: 60px;
+    float: right;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 20%;
+    margin-left: 10px;
+    color: #FFFFFF;
+    height: 400px;
+    background-color: #800000;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+
+
+.deletedRecHighlight
+{color:Green;font-style:italic;font-weight:bold;text-decoration:underline;}
+
+.login
+{font:#FFFFFF;
+    font: large important;
+    width: auto;
+    float: right;
+    padding-bottom: 0px;
+    height: 11px;
+    margin-right: 150px;
+}
+
+.menu
+{float:left;
+}
+.search
+{
+    float: left;
+    padding-bottom: 0px;
+}
+.logo
+{margin-left:0px;
+    height: 79px;
+    
+    width: 1462px;
+    padding-top:50px;
+    
+}
+.announcement
+{
+   
+    float: right;
+    
+    height: 307px;
+    width: 37%;
+    position: static;
+    
+    display: block;
+    bottom: 0px;
+    margin-top: 222px;
+}
+
+.review
+
+{margin-top:10px;
+    float: left;
+    height: 309px;
+    left:0px;
+    position:static;
+    width: 39%;
+    display: block;
+    bottom: 0px;
+    margin-top: 221px;
+}
+.slideshow
+{
+    
+    display:block;
+    top: 0px;
+    
+    clip: rect(0px, 0px, auto, auto);
+    height: 304px;
+    width: 60%;
+    
+}
+
+.Repeater1
+{
+  background-color:#FF0000;
+   font-size: medium;
+   text-align: left;
+ 
+}
+.position1
+{
+    position:absolute;
+    left:635px;
+}
+
+.position2
+{
+    position:absolute;
+    left:730px;
+}
+
+.position3
+{
+    position:absolute;
+    left:628px;
+}
